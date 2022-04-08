@@ -1,0 +1,158 @@
+@media (max-width: 1710px)
+  .about
+    &-img
+      &__wrapper
+        width: 30%
+        height: auto
+        &::after
+          height: calc( 100% + 20px )
+@media (max-width: 1350px)
+  .container
+    max-width: 960px
+  .header
+    &-menu
+      gap: 60px
+  .hero
+    min-height: 725px
+    padding-top: 220px
+    padding-bottom: 200px
+    &__wrapper
+      max-width: 800px
+  .about
+    overflow: hidden
+    &-title
+      &__wrapper
+        max-width: 960px
+    &__wrapper
+      max-width: 960px
+      margin: auto
+      justify-content: space-between
+      gap: 30px
+    &-img
+      &__wrapper
+        min-width: 60%
+  .feedback
+    min-height: 725px
+    padding-top: 32px
+    padding-bottom: 130px
+    &__wrapper
+      &::after, &::before
+        height: 6px
+        width: 282px
+@media (max-width: 992px)
+  .container
+    max-width: 700px
+  .header
+    &-logo
+      width: 100px
+    &-nav
+      padding: 25px 0
+    &-menu
+      gap: 40px
+  .hero
+    padding-top: 182px
+    padding-bottom: 170px
+    &__wrapper
+      max-width: 500px
+  .about
+    &::after
+      width: 300px
+      height: 140px
+    &-text
+      margin-bottom: 20px
+      width: 450px
+      &__wrapper
+    &-title
+      &__wrapper
+        max-width: 700px
+    &__wrapper
+      max-width: 700px
+      gap: 40px
+    &-img
+      &__wrapper
+        min-width: 60%
+        &::after
+          height: calc( 100% + 5px )
+  .feedback
+    &-subtitle
+      margin-bottom: 20px
+    &__wrapper
+      &::after, &::before
+        height: 4px
+        width: 212px
+    &-form
+      min-width: 480px
+  .advantages
+    margin-top: 20px
+    &-subtitle
+      margin-bottom: 20px
+    &__wrapper
+      grid-template-columns: repeat(2, 1fr)
+      row-gap: 30px
+      column-gap: 26px
+  .advantage
+    &-img
+      height: 80px
+@media (max-width: 768px)
+  .container
+    max-width: 576px
+  .burger-button
+    display: block
+  .header
+    &-nav
+      padding: 20px 0
+    &-menu
+      display: none
+  .hero
+    min-height: 640px
+    padding-top: 157px
+    padding-bottom: 100px
+  .feedback
+    min-height: 640px
+    padding-bottom: 60px
+    &__wrapper
+      &::after, &::before
+        height: 2px
+        width: 124px
+        bottom: 30px
+  .arrow
+    display: none
+  .about
+    padding-top: 25px
+    padding-bottom: 25px
+    &::after
+      width: 210px
+      height: 85px
+    &__wrapper
+      max-width: 576px
+    &-title
+      &__wrapper
+        max-width: 576px
+@media (max-width: 610px)
+  .container
+     width: 88%
+  .about
+    padding-top: 25px
+    &::after
+      right: 0
+      left: auto
+      width: 130px
+      height: 40px
+    &__wrapper
+      max-width: 88%
+    &-title
+      &__wrapper
+        align-items: start
+        max-width: 88%
+        margin-bottom: 25px
+    &-img__wrapper
+      display: none
+    &-text
+      width: auto
+      margin-bottom: 15px
+  .advantages
+    &__wrapper
+      grid-template-columns: repeat(1, 1fr)
+  .feedback
+    &-form
+      min-width: 100%

@@ -1,0 +1,55 @@
+.hero
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 264px
+  padding-bottom: 257px
+  position: relative
+  min-height: 840px
+  &:after
+    content: '' 
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: #000000ba
+    z-index: -1
+  &-img
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    object-fit: cover
+    height: 100%
+    width: 100%
+    z-index: -2
+  &__wrapper
+    margin: auto
+    max-width: 1088px
+    text-align: center
+  &-title
+    font-family: 'bold'
+    font-style: normal
+    font-weight: 700
+    font-size: $textSize-64
+    line-height: $lineHeight-64
+    color: $light
+    margin-top: 0
+    margin-bottom: 24px
+  &-subtitle
+    font-family: 'regular'
+    font-style: normal
+    font-weight: 500
+    font-size: $textSize-24
+    line-height: $lineHeight-29
+    color: $light
+    margin-top: 0
+    margin-bottom: 56px
+  &-button
+    position: sticky
+    min-height: 64px
+    padding: 0 64px
