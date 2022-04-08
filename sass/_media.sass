@@ -13,9 +13,10 @@
     &-menu
       gap: 60px
   .hero
-    min-height: 725px
-    padding-top: 220px
-    padding-bottom: 200px
+    &-slide
+      min-height: 725px
+      padding-top: 220px
+      padding-bottom: 200px
     &__wrapper
       max-width: 800px
   .about
@@ -50,8 +51,9 @@
     &-menu
       gap: 40px
   .hero
-    padding-top: 182px
-    padding-bottom: 170px
+    &-slide
+      padding-top: 182px
+      padding-bottom: 170px
     &__wrapper
       max-width: 500px
   .about
@@ -104,9 +106,14 @@
     &-menu
       display: none
   .hero
-    min-height: 640px
-    padding-top: 157px
-    padding-bottom: 100px
+    &-slide
+      min-height: 640px
+      padding-top: 157px
+      padding-bottom: 100px
+    &-slider
+      &__controller
+        right: 50%
+        transform: translateX(50%)
   .feedback
     min-height: 640px
     padding-bottom: 60px

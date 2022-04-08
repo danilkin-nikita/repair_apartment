@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ремонт квартир</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
@@ -40,23 +41,69 @@
     <nav class="mobile-menu"></nav>
     <!-- /.mobile-menu -->
     <section class="hero">
-      <img src="img/header/banner.jpg" alt="Баннер" class="hero-img" />
-      <div class="container">
-        <div class="hero__wrapper">
-          <h1 class="hero-title">Ремонт квартир, домов и коттеджей в Минске</h1>
-          <p class="hero-subtitle">
-            С нами вы сможете забыть обо всех хлопотах и получить желанный
-            результат
-          </p>
+      <div class="hero-slider">
+        <div class="hero-slider__wrapper swiper-wrapper">
+          <div class="hero-slide swiper-slide">
+            <img src="img/hero/slide-1.jpg" alt="Баннер" class="hero-img" />
+            <div class="container">
+              <div class="hero__wrapper">
+                <span class="hero-title">
+                  Ремонт квартир, домов и коттеджей в Минске
+                </span>
+                <p class="hero-subtitle">
+                  С нами вы сможете забыть обо всех хлопотах и получить желанный
+                  результат
+                </p>
+                <button class="hero-button button">Консультация</button>
+              </div>
+            </div>
+            <!-- /.container -->
+          </div>
+          <!-- /.hero-slide -->
+          <div class="hero-slide swiper-slide">
+            <img src="img/hero/slide-2.jpg" alt="Баннер" class="hero-img" />
+            <div class="container">
+              <div class="hero__wrapper">
+                <span class="hero-title">
+                  Индивидуальный подход к каждому клиенту
+                </span>
+                <p class="hero-subtitle">Мы поможем вам с выбором</p>
+                <button class="hero-button button">Консультация</button>
+              </div>
+            </div>
+            <!-- /.container -->
+          </div>
+          <!-- /.hero-slide -->
+          <div class="hero-slide swiper-slide">
+            <img src="img/hero/slide-3.jpg" alt="Баннер" class="hero-img" />
+            <div class="container">
+              <div class="hero__wrapper">
+                <span class="hero-title">
+                  Гарантия качества на каждую оказанную услугу
+                </span>
+                <p class="hero-subtitle">Мы уверены в том что делаем</p>
+                <button class="hero-button button">Консультация</button>
+              </div>
+            </div>
+            <!-- /.container -->
+          </div>
+          <!-- /.hero-slide -->
         </div>
       </div>
-      <!-- /.container -->
-      <button class="hero-button button">Консультация</button>
-      <a href="#about" class="arrow">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
+      <div class="container container--relative">
+        <a href="#about" class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <div class="hero-slider__controller">
+          <button class="hero-slider__button-prev"></button>
+          <div class="hero-slider__pagination"></div>
+          <button class="hero-slider__button-next"></button>
+        </div>
+      </div>
+
+      <!-- /.hero-slider -->
     </section>
     <section class="about" id="about">
       <div class="about-title__wrapper">
@@ -210,6 +257,7 @@
       </div>
       <!-- /.container -->
     </section>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

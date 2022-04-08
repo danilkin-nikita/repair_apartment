@@ -1,11 +1,5 @@
 "use strict";
 
-window.addEventListener("scroll", function () {
-  console.log(pageYOffset);
-});
-
-console.log(pageYOffset);
-
 const toggleHeaderStyle = () => {
   const header = document.querySelector(".header");
 
@@ -25,3 +19,25 @@ const toggleHeaderStyle = () => {
 };
 
 toggleHeaderStyle();
+
+const heroSlider = new Swiper(".hero-slider", {
+  slideClass: "hero-slide",
+  wrapperClass: "hero-slider__wrapper",
+  loop: true,
+  effect: "fade",
+  pagination: {
+    el: ".hero-slider__pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + "0" + (index + 1) + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".hero-slider__button-next",
+    prevEl: ".hero-slider__button-prev",
+  },
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+});

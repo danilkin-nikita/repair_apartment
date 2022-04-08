@@ -1,22 +1,52 @@
 .hero
-  display: flex
-  flex-direction: column
-  align-items: center
-  padding-top: 264px
-  padding-bottom: 257px
   position: relative
-  min-height: 840px
-  &:after
-    content: '' 
-    position: absolute
+  &-slider
     width: 100%
-    height: 100%
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    background: #000000ba
+    overflow: hidden
+    &__button
+      &-prev, &-next
+        width: 15px
+        height: 15px
+        border: none
+        border-top: 2px solid #ffffff !important
+        border-right: 2px solid #ffffff !important
+        background: none
+        opacity: 0.2
+        cursor: pointer
+        &:hover
+          opacity: 1
+      &-next
+        transform: rotate(45deg)
+      &-prev
+        transform: rotate(-135deg)
+    &__controller
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      bottom: 50px
+      right: 0
+      z-index: 1
+      gap: 20px
+    &__pagination
+      display: flex
+      gap: 24px
+  &-slide
+    padding-top: 264px
+    padding-bottom: 257px
     z-index: -1
+    min-height: 840px
+    &:after
+      content: '' 
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: #000000ba
+      z-index: -1
   &-img
     position: absolute
     left: 0
@@ -32,6 +62,7 @@
     max-width: 1088px
     text-align: center
   &-title
+    display: block
     font-family: 'bold'
     font-style: normal
     font-weight: 700
@@ -50,6 +81,5 @@
     margin-top: 0
     margin-bottom: 56px
   &-button
-    position: sticky
     min-height: 64px
     padding: 0 64px
