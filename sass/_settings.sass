@@ -45,6 +45,10 @@ button
   font-size: $textSize-24
   line-height: $lineHeight-29
   color: $light
+  transition: 0.15s
+  &:hover
+    background-color: #ddccbb7f
+    transition: 0.3s
 .arrow
   position: absolute
   bottom: 20px
@@ -170,3 +174,23 @@ button
     &__img
       width: 30px
       height: 30px
+.link
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 35px
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    height: 3px
+    opacity: 0
+    transition: 0.5s
+    width: 0%
+    background-color: $light
+    z-index: 1
+  &:hover
+    &::after
+      width: 100%
+      opacity: 1

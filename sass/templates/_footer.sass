@@ -13,6 +13,7 @@
     &__item
       display: flex
       flex-direction: column
+      align-items: start
       margin-bottom: 42px
     &__text
       font-family: 'bold'
@@ -24,15 +25,19 @@
       margin-bottom: 12px
     &__link
       font-family: 'medium'
+      text-decoration: none
       font-style: normal
       font-weight: 500
       font-size: $textSize-20
-      text-decoration: none
+      line-height: 120%
       color: $light
   &-menu
     padding: 0
     margin: 0
     list-style: none
+    display: flex
+    flex-direction: column
+    align-items: start
     &__item
       display: flex
       flex-direction: column

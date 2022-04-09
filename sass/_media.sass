@@ -42,6 +42,9 @@
       &::after, &::before
         height: 6px
         width: 282px
+  .services
+    &-subtitle
+      margin-bottom: 50px
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -97,6 +100,15 @@
   .advantage
     &-img
       height: 80px
+  .services
+    padding-top: 30px
+    &::after, &::before
+      height: 10px
+      width: 50%
+    &::after
+      top: 45px
+  .price
+    margin-bottom: 60px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -107,6 +119,9 @@
       padding: 10px 0
     &-logo
       width: 80px
+    &-link
+      &::after, &::before
+        content: none
     &-menu
       display: none
   .hero
@@ -151,6 +166,28 @@
     &__social
       &-links
         margin-bottom: 42px
+  .table
+    &-text
+      &:last-child
+        display: none
+      &:nth-child(3)
+        border: none
+  .services
+    padding-bottom: 30px
+    &::after, &::before
+      height: 8px
+      width: 42%
+    &::before
+      bottom: 45px
+    &-total
+      display: none
+  .link
+    &::after
+      content: none
+  .button
+    &:hover
+      background: none
+      transition: 0.3s
 @media (max-width: 610px)
   .container
      width: 88%
@@ -190,3 +227,15 @@
     &-button
       width: auto
       grid-column: span 1
+  .table
+    &-text
+      padding: 10px 5px
+      font-size: 15px
+      &:last-child
+        display: none
+      &:nth-child(3)
+        border: none
+  .price
+    &-tab
+      font-size: 15px
+      padding: 10px 5px

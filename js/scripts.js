@@ -41,3 +41,32 @@ const heroSlider = new Swiper(".hero-slider", {
     disableOnInteraction: false,
   },
 });
+
+const tabs = () => {
+  const tabHeader = document.querySelector(".price-tabs"),
+    tab = [...tabHeader.querySelectorAll(".price-tab")],
+    tabContent = document.querySelectorAll(".price-table");
+
+  const toggleTabContent = (index) => {
+    for (let i = 0; i < tabContent.length; i++) {
+      if (index === i) {
+        tab[i].classList.add("price-tab--active");
+        tabContent[i].classList.add("price-table--active");
+      } else {
+        tab[i].classList.remove("price-tab--active");
+        tabContent[i].classList.remove("price-table--active");
+      }
+    }
+  };
+
+  tabHeader.addEventListener("click", (event) => {
+    let target = event.target;
+    target = target.closest(".price-tab");
+
+    toggleTabContent(tab.indexOf(target));
+  });
+};
+
+if (document.querySelector(".price-tabs")) {
+  tabs();
+}

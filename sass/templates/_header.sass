@@ -29,6 +29,7 @@
     padding: 0
     list-style: none
   &-link
+    position: relative
     font-family: 'regular'
     font-style: normal
     font-weight: 500
@@ -36,6 +37,42 @@
     line-height: 160%
     color: $light
     text-decoration: none
+    &::after
+      content: ''
+      position: absolute
+      top: 50px
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      height: 2px
+      opacity: 0
+      transition: 0.5s
+      width: 0%
+      background-color: $light
+      z-index: 1
+    &:hover
+      &::after
+        width: 100%
+        opacity: 1
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 50px
+      left: 0
+      right: 0
+      margin: auto
+      height: 2px
+      opacity: 0
+      transition: 0.5s
+      width: 0%
+      background-color: $light
+      z-index: 1
+    &:hover
+      &::before
+        width: 100%
+        opacity: 1
 .burger
   &-button
     display: none
