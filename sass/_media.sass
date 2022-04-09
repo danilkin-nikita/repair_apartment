@@ -13,6 +13,8 @@
     &-menu
       gap: 60px
   .hero
+    &-button
+      bottom: 150px
     &-slide
       min-height: 725px
       padding-top: 220px
@@ -102,7 +104,9 @@
     display: block
   .header
     &-nav
-      padding: 20px 0
+      padding: 10px 0
+    &-logo
+      width: 80px
     &-menu
       display: none
   .hero
@@ -135,6 +139,15 @@
     &-title
       &__wrapper
         max-width: 576px
+  .footer
+    &__top
+      grid-template-columns: 1fr 1fr
+    &-button
+      grid-column: span 2
+      order: 1
+    &__social
+      &-links
+        margin-bottom: 42px
 @media (max-width: 610px)
   .container
      width: 88%
@@ -163,3 +176,14 @@
   .feedback
     &-form
       min-width: 100%
+  .hero
+    &-button
+      bottom: 120px
+  .footer
+    &-menu
+      margin-bottom: 36px
+    &__top
+      grid-template-columns: 1fr
+    &-button
+      width: auto
+      grid-column: span 1

@@ -41,9 +41,9 @@
     <nav class="mobile-menu"></nav>
     <!-- /.mobile-menu -->
     <section class="hero">
-      <div class="hero-slider">
+      <div class="hero-slider hero__slider">
         <div class="hero-slider__wrapper swiper-wrapper">
-          <div class="hero-slide swiper-slide">
+          <div class="hero-slide hero__slide swiper-slide">
             <img src="img/hero/slide-1.jpg" alt="Баннер" class="hero-img" />
             <div class="container">
               <div class="hero__wrapper">
@@ -54,13 +54,12 @@
                   С нами вы сможете забыть обо всех хлопотах и получить желанный
                   результат
                 </p>
-                <button class="hero-button button">Консультация</button>
               </div>
             </div>
             <!-- /.container -->
           </div>
           <!-- /.hero-slide -->
-          <div class="hero-slide swiper-slide">
+          <div class="hero-slide hero__slide swiper-slide">
             <img src="img/hero/slide-2.jpg" alt="Баннер" class="hero-img" />
             <div class="container">
               <div class="hero__wrapper">
@@ -68,13 +67,12 @@
                   Индивидуальный подход к каждому клиенту
                 </span>
                 <p class="hero-subtitle">Мы поможем вам с выбором</p>
-                <button class="hero-button button">Консультация</button>
               </div>
             </div>
             <!-- /.container -->
           </div>
           <!-- /.hero-slide -->
-          <div class="hero-slide swiper-slide">
+          <div class="hero-slide hero__slide swiper-slide">
             <img src="img/hero/slide-3.jpg" alt="Баннер" class="hero-img" />
             <div class="container">
               <div class="hero__wrapper">
@@ -82,7 +80,6 @@
                   Гарантия качества на каждую оказанную услугу
                 </span>
                 <p class="hero-subtitle">Мы уверены в том что делаем</p>
-                <button class="hero-button button">Консультация</button>
               </div>
             </div>
             <!-- /.container -->
@@ -91,6 +88,7 @@
         </div>
       </div>
       <div class="container container--relative">
+        <button class="hero-button button">Консультация</button>
         <a href="#about" class="arrow">
           <span></span>
           <span></span>
@@ -257,6 +255,58 @@
       </div>
       <!-- /.container -->
     </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <ul class="footer-contact">
+            <li class="footer-contact__item">
+              <span class="footer-contact__text">Телефон</span
+              ><a href="tel:+375000000000" class="footer-contact__link link"
+                >+375000000000</a
+              >
+            </li>
+            <li class="footer-contact__item">
+              <span class="footer-contact__text">Email</span
+              ><a href="mailto:test@test.com" class="footer-contact__link link"
+                >test@test.com</a
+              >
+            </li>
+          </ul>
+          <ul class="footer-menu">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">О нас</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Услуги</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Портфолио</a>
+            </li>
+          </ul>
+          <button class="footer-button button">Консультация</button>
+          <div class="footer__social-links social-links">
+            <ul class="social-links__list">
+              <li class="social-links__item">
+                <a href="#" class="social-link"
+                  ><img
+                    src="img/viber.svg"
+                    alt="viber"
+                    class="social-link__img"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- /.footer-social__links -->
+        </div>
+        <!-- /.footer-top -->
+        <div class="footer__bottom">
+          <span class="footer-info">@2021</span>
+        </div>
+        <!-- /.footer__bottom -->
+      </div>
+      <!-- /.container -->
+    </footer>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
