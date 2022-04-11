@@ -50,6 +50,7 @@
     color: $light
     margin-bottom: 56px
   &-form
+    position: relative
     display: flex
     flex-direction: column
     min-width: 640px
@@ -60,4 +61,16 @@
     &__button
       min-height: 64px
       padding: 0 57px
-    
+    &__preloader
+      width: 60px
+      height: 60px
+.status-message
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $light
+  font-family: 'medium'
+  font-style: normal
+  font-weight: 500
+  font-size: $textSize-20
+  margin-top: 20px

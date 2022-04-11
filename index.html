@@ -17,16 +17,16 @@
           </a>
           <ul class="header-menu">
             <li class="header-item">
-              <a href="#" class="header-link">О нас</a>
+              <a href="#about" class="header-link scroll-link">О нас</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Услуги</a>
+              <a href="#services" class="header-link scroll-link">Услуги</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Портфолио</a>
+              <a href="#" class="header-link scroll-link">Портфолио</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Контакты</a>
+              <a href="#footer" class="header-link scroll-link">Контакты</a>
             </li>
           </ul>
           <!-- /.header-menu -->
@@ -38,9 +38,29 @@
       </nav>
       <!-- /.header-nav -->
     </header>
-    <nav class="mobile-menu"></nav>
+    <nav class="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="#about" class="mobile-menu__link scroll-link">О нас</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#services" class="mobile-menu__link scroll-link">Услуги</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link scroll-link">Портфолио</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#footer" class="mobile-menu__link scroll-link">Контакты</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#feedback" class="mobile-menu__button button scroll-link"
+            >Консультация</a
+          >
+        </li>
+      </ul>
+    </nav>
     <!-- /.mobile-menu -->
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="hero-slider hero__slider">
         <div class="hero-slider__wrapper swiper-wrapper">
           <div class="hero-slide hero__slide swiper-slide">
@@ -88,8 +108,10 @@
         </div>
       </div>
       <div class="container container--relative">
-        <button class="hero-button button">Консультация</button>
-        <a href="#about" class="arrow">
+        <a href="#feedback" class="hero-button button scroll-link"
+          >Консультация</a
+        >
+        <a href="#about" class="arrow scroll-link">
           <span></span>
           <span></span>
           <span></span>
@@ -214,8 +236,8 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="feedback">
-      <a href="#services" class="arrow">
+    <section id="feedback" class="feedback">
+      <a href="#services" class="arrow scroll-link">
         <span></span>
         <span></span>
         <span></span>
@@ -227,7 +249,7 @@
           Оставьте свои данные и мы с вами свяжемся
         </p>
         <div class="feedback__wrapper">
-          <form action="#" class="feedback-form">
+          <form class="feedback-form">
             <input
               class="feedback-form__input input"
               type="text"
@@ -245,9 +267,16 @@
               name="message"
               placeholder="Напишите комментарий (не обязательно)"
             ></textarea>
+            <input
+              type="hidden"
+              class="feedback-form__hidden"
+              value=""
+              name="code"
+            />
             <button class="feedback-form__button button">
               Заказать консультацию
             </button>
+            <div class="status-message"></div>
           </form>
           <!-- /.feedback-form -->
         </div>
@@ -376,7 +405,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="container">
         <div class="footer__top">
           <ul class="footer-contact">
@@ -395,16 +424,24 @@
           </ul>
           <ul class="footer-menu">
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link link">О нас</a>
+              <a href="#about" class="footer-menu__link link scroll-link"
+                >О нас</a
+              >
             </li>
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link link">Услуги</a>
+              <a href="#services" class="footer-menu__link link scroll-link"
+                >Услуги</a
+              >
             </li>
             <li class="footer-menu__item">
-              <a href="#" class="footer-menu__link link">Портфолио</a>
+              <a href="#" class="footer-menu__link link scroll-link"
+                >Портфолио</a
+              >
             </li>
           </ul>
-          <button class="footer-button button">Консультация</button>
+          <a href="#feedback" class="footer-button button scroll-link"
+            >Консультация</a
+          >
           <div class="footer__social-links social-links">
             <ul class="social-links__list">
               <li class="social-links__item">
@@ -428,6 +465,13 @@
       </div>
       <!-- /.container -->
     </footer>
+    <a href="#hero" class="to-top scroll-link">
+      <svg viewBox="0 0 5 9">
+        <path
+          d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z"
+        />
+      </svg>
+    </a>
     <script src="js/countUp.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>

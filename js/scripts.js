@@ -114,3 +114,128 @@ const calc = () => {
 };
 
 calc();
+
+const sendForm = () => {
+  const statusMessage = document.querySelector(".status-message");
+
+  const error = (elem, cssClass) => {
+    elem.classList.add(cssClass);
+    setTimeout(() => {
+      elem.classList.remove(cssClass);
+    }, 6000);
+  };
+
+  document.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let target = event.target;
+
+    const inputName = target.querySelector('input[name="name"]'),
+      inputPhone = target.querySelector('input[name="phone"]');
+
+    const validName = /^[а-яА-Яa-zA-Z]{2,}$/,
+      validPhone = /^[+\-\)\(0-9 ]+$/;
+
+    let valid = true;
+
+    if (target.matches(".feedback-form")) {
+      if (inputName) {
+        if (!inputName.value.match(validName)) {
+          error(inputName, "error-input");
+          valid = false;
+        }
+      }
+      if (!inputPhone.value.match(validPhone)) {
+        error(inputPhone, "error-input");
+        valid = false;
+      }
+      if (valid === false) {
+        return;
+      }
+
+      statusMessage.innerHTML = `<img class="feedback-form__preloader" src="./img/loading.svg">`;
+    }
+    const formData = new FormData(target);
+
+    postData(formData)
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error("status network not 200");
+        }
+        statusMessage.textContent =
+          "Сообщение отправлено! Мы скоро с вами свяжемся.";
+        setTimeout(() => {
+          statusMessage.textContent = "";
+        }, 6000);
+      })
+      .catch((error) => {
+        console.error(error);
+        statusMessage.textContent = "Что-то пошло не так...";
+        setTimeout(() => {
+          statusMessage.textContent = "";
+        }, 6000);
+      });
+
+    target.reset();
+  });
+
+  const postData = (formData) => {
+    return fetch("./send.php", {
+      method: "POST",
+      body: formData,
+      action: "./send.php",
+    });
+  };
+};
+
+sendForm();
+
+const moveUp = () => {
+  let toTopBtn = document.querySelector(".to-top");
+
+  document.addEventListener("scroll", () => {
+    if (pageYOffset >= 650) {
+      toTopBtn.classList.add("to-top--active");
+    } else {
+      toTopBtn.classList.remove("to-top--active");
+    }
+  });
+};
+
+moveUp();
+
+const navigation = () => {
+  let menuButton = document.querySelector(".burger-button"),
+    navbarMenu = document.querySelector(".mobile-menu"),
+    header = document.querySelector(".header");
+
+  const moveToAnchor = (item) => {
+    const blockID = item.getAttribute("href").substr(1);
+
+    if (document.getElementById(blockID)) {
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  document.addEventListener("click", (event) => {
+    let target = event.target;
+
+    if (
+      target.closest(".burger-button") ||
+      target.closest(".mobile-menu__item")
+    ) {
+      header.classList.add("header--fixed");
+      navbarMenu.classList.toggle("mobile-menu--active");
+      menuButton.classList.toggle("burger-button--active");
+      document.body.classList.toggle("scroll-menu");
+    }
+    if (target.closest(".scroll-link")) {
+      event.preventDefault();
+      moveToAnchor(target.closest("a"));
+    }
+  });
+};
+
+navigation();

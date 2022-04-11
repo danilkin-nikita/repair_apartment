@@ -38,6 +38,9 @@ button
   &--relative
     position: relative
 .button
+  display: flex
+  align-items: center
+  justify-content: center
   border: 2px solid $light
   background: none
   font-style: normal
@@ -46,6 +49,7 @@ button
   line-height: $lineHeight-29
   color: $light
   transition: 0.15s
+  text-decoration: none
   &:hover
     background-color: #ddccbb7f
     transition: 0.3s
@@ -194,3 +198,31 @@ button
     &::after
       width: 100%
       opacity: 1
+.error
+  &-input
+    box-shadow: 0px 0px 0px 3px rgba(255, 0, 0, 1) inset
+.to-top
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  bottom: -70px
+  right: 30px
+  background-color: $hover
+  border-radius: 20px
+  padding: 10px
+  transition: 0.2s linear
+  height: 70px
+  width: 70px
+  z-index: 90
+  opacity: 0.7
+  &:hover
+    opacity: 1
+  & svg
+    transform: rotate(270deg)
+    fill: $light
+    max-width: 20px
+  &--active
+    bottom: 30px
+.scroll-menu
+  overflow: hidden
