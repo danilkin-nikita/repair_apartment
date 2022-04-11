@@ -70,3 +70,47 @@ const tabs = () => {
 if (document.querySelector(".price-tabs")) {
   tabs();
 }
+
+const calc = () => {
+  let price = document.querySelector(".price");
+  let servicesCounts = [...document.querySelectorAll(".table-input")];
+  let servicesCosts = document.querySelectorAll(".table-cost");
+  let servicesTotalCost = document.querySelector(".services-total__cost");
+
+  let servicesArr = Array(servicesCosts.length);
+  let servicesSum = 0;
+
+  const counting = (index) => {
+    for (let i = 0; i < servicesCosts.length; i++) {
+      if (index === i) {
+        let item = servicesCounts[i].value * servicesCosts[i].value;
+        servicesArr.splice(i, 1, item);
+      }
+    }
+    servicesSum = servicesArr.reduce((acc, rec) => acc + rec);
+  };
+
+  price.addEventListener("input", (event) => {
+    let target = event.target;
+    if (target.closest(".table-input")) {
+      counting(servicesCounts.indexOf(target));
+
+      const animation = new countUp(
+        "totalCost",
+        servicesTotalCost.textContent,
+        servicesSum,
+        0,
+        1,
+        {
+          useEasing: false,
+          useGrouping: false,
+          separator: ",",
+          decimal: ".",
+        }
+      );
+      animation.start();
+    }
+  });
+};
+
+calc();
