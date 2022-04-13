@@ -108,9 +108,10 @@
         </div>
       </div>
       <div class="container container--relative">
-        <a href="#feedback" class="hero-button button scroll-link"
-          >Консультация</a
-        >
+        <button data-toggle="modal" class="hero-button button">
+          Консультация
+        </button>
+
         <a href="#about" class="arrow scroll-link">
           <span></span>
           <span></span>
@@ -248,39 +249,36 @@
         <p class="feedback-subtitle section-subtitle">
           Оставьте свои данные и мы с вами свяжемся
         </p>
-        <div class="feedback__wrapper">
-          <form class="feedback-form">
-            <input
-              class="feedback-form__input input"
-              type="text"
-              placeholder="Ваше имя"
-              name="name"
-            />
-            <input
-              class="feedback-form__input input"
-              type="tel"
-              placeholder="Ваш номер телефона"
-              name="phone"
-            />
-            <textarea
-              class="feedback-form__textarea textarea"
-              name="message"
-              placeholder="Напишите комментарий (не обязательно)"
-            ></textarea>
-            <input
-              type="hidden"
-              class="feedback-form__hidden"
-              value=""
-              name="code"
-            />
-            <button class="feedback-form__button button">
-              Заказать консультацию
-            </button>
-            <div class="status-message"></div>
-          </form>
-          <!-- /.feedback-form -->
-        </div>
-        <!-- /.feedback__wrapper -->
+        <form class="feedback-form form">
+          <input
+            class="feedback-form__input input"
+            type="text"
+            placeholder="Ваше имя"
+            name="name"
+          />
+          <input
+            class="feedback-form__input input"
+            type="tel"
+            placeholder="Ваш номер телефона"
+            name="phone"
+          />
+          <textarea
+            class="feedback-form__textarea textarea"
+            name="message"
+            placeholder="Напишите комментарий (не обязательно)"
+          ></textarea>
+          <input
+            type="hidden"
+            class="feedback-form__hidden"
+            value=""
+            name="code"
+          />
+          <button class="feedback-form__button button">
+            Заказать консультацию
+          </button>
+          <div class="status-message"></div>
+        </form>
+        <!-- /.feedback-form -->
       </div>
       <!-- /.container -->
     </section>
@@ -439,9 +437,9 @@
               >
             </li>
           </ul>
-          <a href="#feedback" class="footer-button button scroll-link"
-            >Консультация</a
-          >
+          <button data-toggle="modal" class="footer-button button">
+            Консультация
+          </button>
           <div class="footer__social-links social-links">
             <ul class="social-links__list">
               <li class="social-links__item">
@@ -465,6 +463,45 @@
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <button class="modal__close">
+          <span class="modal__close-line"></span>
+        </button>
+        <form class="modal-form form">
+          <input
+            class="modal-form__input input"
+            type="text"
+            placeholder="Ваше имя"
+            name="name"
+          />
+          <input
+            class="modal-form__input input"
+            type="tel"
+            placeholder="Ваш номер телефона"
+            name="phone"
+          />
+          <textarea
+            class="modal-form__textarea textarea"
+            name="message"
+            placeholder="Напишите комментарий (не обязательно)"
+          ></textarea>
+          <input
+            type="hidden"
+            class="modal-form__hidden"
+            value=""
+            name="code"
+          />
+          <button class="modal-form__button button">
+            Заказать консультацию
+          </button>
+          <div class="status-message"></div>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
     <a href="#hero" class="to-top scroll-link">
       <svg viewBox="0 0 5 9">
         <path

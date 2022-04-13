@@ -116,8 +116,6 @@ const calc = () => {
 calc();
 
 const sendForm = () => {
-  const statusMessage = document.querySelector(".status-message");
-
   const error = (elem, cssClass) => {
     elem.classList.add(cssClass);
     setTimeout(() => {
@@ -128,8 +126,8 @@ const sendForm = () => {
   document.addEventListener("submit", (event) => {
     event.preventDefault();
     let target = event.target;
-
-    const inputName = target.querySelector('input[name="name"]'),
+    const statusMessage = target.querySelector(".status-message"),
+      inputName = target.querySelector('input[name="name"]'),
       inputPhone = target.querySelector('input[name="phone"]');
 
     const validName = /^[а-яА-Яa-zA-Z]{2,}$/,
@@ -137,7 +135,7 @@ const sendForm = () => {
 
     let valid = true;
 
-    if (target.matches(".feedback-form")) {
+    if (target.matches(".form")) {
       if (inputName) {
         if (!inputName.value.match(validName)) {
           error(inputName, "error-input");
@@ -239,3 +237,49 @@ const navigation = () => {
 };
 
 navigation();
+
+const toogleModal = () => {
+  const modalOverlay = document.querySelector(".modal__overlay"),
+    modalDialog = document.querySelector(".modal__dialog");
+
+  const openModal = () => {
+    modalOverlay.classList.add("modal__overlay--visible");
+    modalDialog.classList.add("modal__dialog--visible");
+    document.body.classList.add("scroll-menu");
+  };
+
+  const closeModal = () => {
+    modalOverlay.classList.remove("modal__overlay--visible");
+    modalDialog.classList.remove("modal__dialog--visible");
+    modalDialog.classList.remove("modal__dialog--visible");
+    document.body.classList.remove("scroll-menu");
+  };
+
+  document.addEventListener("click", (event) => {
+    let target = event.target;
+
+    if (target.matches('[data-toggle="modal"]')) {
+      event.preventDefault();
+      openModal();
+    }
+
+    if (
+      target.closest(".modal__close") ||
+      target.matches(".modal__overlay") ||
+      target.closest(".modal__status-button")
+    ) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.keyCode === 27 &&
+      modalOverlay.classList.contains("modal__overlay--visible")
+    ) {
+      closeModal();
+    }
+  });
+};
+
+toogleModal();

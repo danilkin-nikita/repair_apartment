@@ -188,6 +188,20 @@
     &:hover
       background: none
       transition: 0.3s
+  .modal
+    &__dialog
+      width: 70%
+      padding: 40px 50px
+    &__close
+      right: 20px
+      top: 10px
+      width: 20px
+      height: 20px
+      &-line
+        &::after, &::before
+          width: 20px
+  .input, .textarea
+    font-size: 16px
 @media (max-width: 610px)
   .container
      width: 88%
@@ -248,6 +262,20 @@
       height: 20px
     &--active
       bottom: 20px
+  .modal
+    &__dialog
+      width: 90%
+      padding: 40px 30px
+    &__close
+      right: 10px
+      top: 10px
+      width: 20px
+      height: 20px
+      &-line
+        &::after, &::before
+          width: 20px
+  .input, .textarea
+    font-size: 15px
 @media (max-width: 400px)
   .mobile-menu
     &__button
