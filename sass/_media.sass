@@ -45,6 +45,11 @@
   .services
     &-subtitle
       margin-bottom: 50px
+  .portfolio
+    &-item
+      min-height: 400px
+      &:first-child:nth-last-child(odd)
+        min-height: 500px
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -109,6 +114,15 @@
       top: 45px
   .price
     margin-bottom: 60px
+  .portfolio
+    &-subtitle
+      margin-bottom: 30px
+    &-item
+      min-height: 300px
+      &:first-child:nth-last-child(odd)
+        min-height: 400px
+      &__title, &__text
+        padding: 20px 20px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -202,6 +216,22 @@
           width: 20px
   .input, .textarea
     font-size: 16px
+  .portfolio
+    &-subtitle
+      margin-bottom: 20px
+    &-item
+      min-height: 250px
+      &:first-child:nth-last-child(odd)
+        min-height: 350px
+      &:hover
+        &::after
+          background: none
+          transition: none
+        .portfolio-img
+          transform: none
+      &__text
+        bottom: 0
+        transition: none
 @media (max-width: 610px)
   .container
      width: 88%
@@ -276,6 +306,14 @@
           width: 20px
   .input, .textarea
     font-size: 15px
+  .portfolio
+    &-grid
+      grid-template-columns: 1fr
+    &-item
+      min-height: 250px
+      &:first-child:nth-last-child(odd)
+        grid-column: span 1
+        min-height: auto
 @media (max-width: 400px)
   .mobile-menu
     &__button

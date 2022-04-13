@@ -251,7 +251,6 @@ const toogleModal = () => {
   const closeModal = () => {
     modalOverlay.classList.remove("modal__overlay--visible");
     modalDialog.classList.remove("modal__dialog--visible");
-    modalDialog.classList.remove("modal__dialog--visible");
     document.body.classList.remove("scroll-menu");
   };
 
