@@ -232,6 +232,9 @@
       &__text
         bottom: 0
         transition: none
+  .to-top
+    &:hover
+      opacity: 0.7
 @media (max-width: 610px)
   .container
      width: 88%
@@ -313,7 +316,7 @@
       min-height: 250px
       &:first-child:nth-last-child(odd)
         grid-column: span 1
-        min-height: auto
+        min-height: 250px
 @media (max-width: 400px)
   .mobile-menu
     &__button
