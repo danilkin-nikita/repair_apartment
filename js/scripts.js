@@ -282,3 +282,5 @@ const toogleModal = () => {
 };
 
 toogleModal();
+
+AOS.init();
