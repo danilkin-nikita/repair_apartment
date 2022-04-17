@@ -1,6 +1,0 @@
-@function calcFluidFontSize($f-min, $f-max)
-  $k: ($f-max - $f-min)/(1920 - 320)
-  $b: $f-min - $k * 320
-  $b: $b * 1px
-  @return calc( #{$k} * 100vw + #{$b} )
-  

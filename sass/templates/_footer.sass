@@ -19,7 +19,7 @@
       font-family: 'bold'
       font-style: normal
       font-weight: 700
-      font-size: $textSize-20
+      @include adaptiv-value('font-size', 20, 15, 0)
       line-height: 120%
       color: $light
       margin-bottom: 12px
@@ -28,7 +28,7 @@
       text-decoration: none
       font-style: normal
       font-weight: 500
-      font-size: $textSize-20
+      @include adaptiv-value('font-size', 20, 15, 0)
       line-height: 120%
       color: $light
   &-menu
@@ -46,7 +46,7 @@
       font-family: 'medium'
       font-style: normal
       font-weight: 500
-      font-size: $textSize-20
+      @include adaptiv-value('font-size', 20, 15, 0)
       text-decoration: none
       color: $light
   &-button

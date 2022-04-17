@@ -66,8 +66,8 @@
     font-family: 'bold'
     font-style: normal
     font-weight: 700
-    font-size: $textSize-64
-    line-height: $lineHeight-64
+    @include adaptiv-value('font-size', 64, 24, 0)
+    @include adaptiv-value('line-height', 73, 34, 0)
     color: $light
     margin-top: 0
     margin-bottom: 24px
@@ -75,8 +75,8 @@
     font-family: 'regular'
     font-style: normal
     font-weight: 500
-    font-size: $textSize-24
-    line-height: $lineHeight-29
+    @include adaptiv-value('font-size', 24, 16, 0)
+    @include adaptiv-value('line-height', 29, 24, 0)
     color: $light
     margin-top: 0
     margin-bottom: 56px

@@ -45,8 +45,8 @@ button
   background: none
   font-style: normal
   font-weight: 500
-  font-size: $textSize-24
-  line-height: $lineHeight-29
+  @include adaptiv-value('font-size', 24, 16, 0)
+  @include adaptiv-value('line-height', 29, 24, 0)
   color: $light
   transition: 0.15s
   text-decoration: none
@@ -79,14 +79,14 @@ button
   font-family: 'medium'
   font-style: normal
   font-weight: 500
-  font-size: $textSize-20
+  @include adaptiv-value('font-size', 20, 15, 0)
   line-height: 24px
 .section
   &-title
     font-family: 'bold'
     font-style: normal
     font-weight: 600
-    font-size: $textSize-48
+    @include adaptiv-value('font-size', 48, 24, 0)
     color: $text-color
     margin: 0
     margin-bottom: 8px
@@ -94,14 +94,14 @@ button
     font-family: 'bold'
     font-style: normal
     font-weight: 600
-    font-size: $textSize-30
+    @include adaptiv-value('font-size', 30, 18, 0)
     color: $text-color-transparent
     margin: 0
 .input
   font-family: 'medium'
   font-style: normal
   font-weight: 500
-  font-size: $textSize-20
+  @include adaptiv-value('font-size', 20, 15, 0)
   line-height: 32px
   padding: 12px 24px
   background-color: $light
@@ -110,7 +110,7 @@ button
   font-family: 'medium'
   font-style: normal
   font-weight: 500
-  font-size: $textSize-20
+  @include adaptiv-value('font-size', 20, 15, 0)
   line-height: 32px
   padding: 12px 24px
   height: 168px
@@ -162,7 +162,7 @@ button
       font-family: 'bold'
       font-style: normal
       font-weight: 700
-      font-size: $textSize-20
+      @include adaptiv-value('font-size', 20, 15, 0)
       line-height: 120%
       color: $light
     &__list

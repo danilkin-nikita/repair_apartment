@@ -45,7 +45,7 @@
       font-family: 'bold'
       font-style: normal
       font-weight: 600
-      font-size: $textSize-24
+      @include adaptiv-value('font-size', 24, 16, 0)
       color: $light
       margin: 0
       text-align: center
@@ -60,7 +60,7 @@
       font-family: 'medium'
       font-style: normal
       font-weight: 500
-      font-size: $textSize-20
+      @include adaptiv-value('font-size', 20, 15, 0)
       color: $light
       margin: 0
       text-align: center

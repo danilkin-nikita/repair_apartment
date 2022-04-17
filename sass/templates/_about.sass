@@ -15,9 +15,10 @@
     font-family: 'bold'
     font-style: normal
     font-weight: 600
-    font-size: $textSize-48
     color: $text-color
     margin: 0
+    margin-bottom: 8px
+    @include adaptiv-value('font-size', 48, 20, 0)
     &__wrapper
       display: flex
       flex-direction: column
@@ -29,7 +30,7 @@
     font-family: 'bold'
     font-style: normal
     font-weight: 600
-    font-size: $textSize-30
+    @include adaptiv-value('font-size', 30, 18, 0)
     color: $text-color-transparent
     margin: 0
   &__wrapper
@@ -44,7 +45,7 @@
     font-family: 'medium'
     font-style: normal
     font-weight: 500
-    font-size: $textSize-20
+    @include adaptiv-value('font-size', 20, 15, 0)
     line-height: 160%
     margin-top: 0
     margin-bottom: 32px

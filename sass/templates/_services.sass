@@ -30,7 +30,7 @@
     font-family: 'bold'
     font-style: normal
     font-weight: 600
-    font-size: $textSize-30
+    @include adaptiv-value('font-size', 30, 18, 0)
     color: $text-color
     margin: 0
 .price
@@ -53,7 +53,7 @@
     font-family: 'medium'
     font-style: normal
     font-weight: 500
-    font-size: $textSize-24
+    @include adaptiv-value('font-size', 24, 16, 0)
     line-height: 29px
     transition: 0.3s
     &::after
@@ -88,7 +88,7 @@
     font-family: 'medium'
     font-style: normal
     font-weight: 500
-    font-size: $textSize-24
+    @include adaptiv-value('font-size', 24, 16, 0)
     text-align: center
     margin: 0
     &:not(:last-child)
@@ -99,7 +99,7 @@
     font-family: 'medium'
     font-style: normal
     font-weight: 500
-    font-size: $textSize-24
+    @include adaptiv-value('font-size', 24, 16, 0)
     padding: 6px 16px 6px 16px
     max-width: 120px
     width: 80px
