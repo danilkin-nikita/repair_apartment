@@ -1,0 +1,92 @@
+.project
+  margin-top: 120px
+  &-img
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    object-fit: cover
+    height: 100%
+    width: 100%
+    z-index: -2
+    transition: 1s transform
+  &-grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 25px
+    margin-top: 50px
+  &-item
+    position: relative
+    overflow: hidden
+    min-height: 300px
+    text-decoration: none
+    &:after
+      content: '' 
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: -1
+      transition: 1s background
+    &:hover
+      &::after
+        background: #0000008e
+        transition: 1s background
+      .portfolio-img
+        transform: scale(1.15)
+        transition: 2s transform
+      .zoom-icon
+        opacity: 1
+        transition: 1s opacity
+  &-content
+    margin-bottom: 80px
+  &__title
+    margin-bottom: 40px
+  &-banner
+    position: relative
+    display: flex
+    justify-content: center
+    height: 350px
+    &:after
+      content: '' 
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: #000000ba
+      z-index: -1
+    &__img
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      object-fit: cover
+      height: 100%
+      width: 100%
+      z-index: -2
+    &__title
+      display: block
+      font-family: 'bold'
+      font-style: normal
+      font-weight: 700
+      @include adaptiv-value('font-size', 48, 24, 0)
+      @include adaptiv-value('line-height', 60, 34, 0)
+      color: $light
+      margin-top: 0
+      margin-bottom: 24px
+.zoom-icon
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 30px
+  opacity: 0
+  transition: 0.5s opacity

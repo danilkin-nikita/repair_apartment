@@ -48,8 +48,6 @@
   .portfolio
     &-item
       min-height: 400px
-      &:first-child:nth-last-child(odd)
-        min-height: 500px
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -119,10 +117,18 @@
       margin-bottom: 30px
     &-item
       min-height: 300px
-      &:first-child:nth-last-child(odd)
-        min-height: 400px
       &__title, &__text
         padding: 20px 20px
+  .project
+    margin-top: 102px
+    &__title
+      margin-bottom: 20px
+    &-banner
+      height: 300px
+    &-grid
+      grid-template-columns: 1fr 1fr
+    &-item
+      min-height: 250px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -221,8 +227,6 @@
       margin-bottom: 20px
     &-item
       min-height: 250px
-      &:first-child:nth-last-child(odd)
-        min-height: 350px
       &:hover
         &::after
           background: none
@@ -235,6 +239,14 @@
   .to-top
     &:hover
       opacity: 0.7
+  .project
+    margin-top: 72px
+    &-banner
+      height: 250px
+    &-grid
+      grid-template-columns: 1fr 1fr
+    &-item
+      min-height: 250px
 @media (max-width: 610px)
   .container
      width: 88%
@@ -314,9 +326,16 @@
       grid-template-columns: 1fr
     &-item
       min-height: 250px
-      &:first-child:nth-last-child(odd)
-        grid-column: span 1
-        min-height: 250px
+  .project
+    &-banner
+      height: 250px
+      &__title
+        text-align: center
+    &-grid
+      margin-top: 40px
+      grid-template-columns: 1fr
+    &-item
+      min-height: 250px
 @media (max-width: 400px)
   .mobile-menu
     &__button

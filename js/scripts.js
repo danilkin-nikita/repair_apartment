@@ -112,8 +112,9 @@ const calc = () => {
     }
   });
 };
-
-calc();
+if (document.querySelector(".price")) {
+  calc();
+}
 
 const sendForm = () => {
   const error = (elem, cssClass) => {
@@ -284,3 +285,9 @@ const toogleModal = () => {
 toogleModal();
 
 AOS.init();
+
+if (document.querySelector(".js-gallery")) {
+  baguetteBox.run(".js-gallery", {
+    animation: "fadeIn",
+  });
+}
